@@ -1,4 +1,11 @@
 // elementi input DOM
+
+const btnAnnulla = document.getElementById("btn-annulla");
+
+const titleBiglietto = document.getElementById("title-biglietto");
+
+const cardBiglietto = document.querySelector(".card-biglietto");
+
 const kmElem = document.getElementById("km");
 
 const etaElem = document.getElementById("età");
@@ -10,7 +17,7 @@ const FormElem = document.getElementById("form");
 
 
 // elementi della card da compilare
-const nameUser = document.querySelector("#card-body-passeggero p")
+const nameUser = document.querySelector("#card-body-passeggero h4")
 
 const prezzoBiglietto = document.getElementById("costo-biglietto");
 
@@ -21,13 +28,22 @@ const codiceCP = document.getElementById("codice-cp");
 const sconto = document.getElementById("offerta")
 
 
+
+
+
+
+
+
 /******** **********/
 FormElem.addEventListener("submit", handlefrom);
 
 function handlefrom(event) {
     event.preventDefault();
 
+cardBiglietto.classList.remove("d-none");
+titleBiglietto.classList.remove("d-none");
 
+    
 
 // valori elementi input DOM
 const km = kmElem.value;
@@ -68,7 +84,7 @@ console.log(message);
 
 
 // stampo i valore in pagina
-nameUser.innerHTML = fullNameUser;
+nameUser.innerHTML = fullNameUser.toUpperCase();
 
 prezzoBiglietto.innerHTML = `${result.toFixed(2)}€`;
 
@@ -84,3 +100,10 @@ FormElem.reset();
 }
 
 
+btnAnnulla.addEventListener("click", function() {
+
+    cardBiglietto.classList.add("d-none");
+
+    titleBiglietto.classList.add("d-none");
+
+});
