@@ -15,22 +15,78 @@
 
 <body>
     <main class="pt-3">
+        <h1 class="text-center">Calcola il prezzo del tuo biglietto</h1>
         <div class="container">
-            <form id="form">
-                <div class="mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <form id="form">
+                        <div class="mb-3">
 
-                    <label for="km" class="form-label">Km da percorrere</label>
-                    <input type="number" class="form-control" id="km" aria-describedby="emailHelp">
+                            <div class="mb-3">
+                                <label for="full-name" class="form-label">Nome e cognome</label>
+                                <input type="text" class="form-control" id="full-name">
+                            </div>
+
+                            <label for="km" class="form-label">Km da percorrere</label>
+                            <input type="number" class="form-control" id="km" aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="età" class="form-label">Età</label>
+                            <input type="number" class="form-control" id="età">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Conferma</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h1 class="text-center pt-4">Il tuo biglietto</h1>
+
+        <div class="container">
+            <div class="card">
+
+                <div class="card-header">
+                    <h4>Dettaglio passeggeri</h4>
 
                 </div>
 
-                <div class="mb-3">
-                    <label for="età" class="form-label">Età</label>
-                    <input type="text" class="form-control" id="età">
-                </div>
+                <div class="card-body" id="card-body-passeggero">
+                    <div class="row rounded-4 border">
 
-                <button type="submit" class="btn btn-primary">Conferma</button>
-            </form>
+                        <div class="col-12 col-lg-4 text-center">
+                            <h4>Nome passeggero</h4>
+                            <p>nome e cognome</p>
+                        </div>
+
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                                <div class="col-12 col-lg-3 text-center pt-1">
+                                    <h6>Offerta</h6>
+                                    <p id="offerta" class="mt-4">biglietto</p>
+                                </div>
+                                <div class="col-12 col-lg-3 text-center pt-1">
+                                    <h6>Carrozza</h6>
+                                    <p id="num-carrozza" class="mt-4">biglietto</p>
+                                </div>
+                                <div class="col-12 col-lg-3 text-center pt-1">
+                                    <h6>Codice CP</h6>
+                                    <p id="codice-cp" class="mt-4">biglietto</p>
+                                </div>
+                                <div class="col-12 col-lg-3 text-center pt-1 bg">
+                                    <h6>Costo biglietto</h6>
+                                    <p id="costo-biglietto" class="mt-4">biglietto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </main>
     <script src="./js/script.js"></script>
